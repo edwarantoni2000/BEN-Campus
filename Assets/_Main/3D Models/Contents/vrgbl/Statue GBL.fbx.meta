@@ -12,8 +12,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Lumba2
+    second: {fileID: 2100000, guid: 4b582d17c15b9464890e584ddea9cc25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material #46
     second: {fileID: 2100000, guid: 20db0c8224714584a8b8a3219e0a907d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 4842589397d22c0449c4c2a2e13db331, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tangan
+    second: {fileID: 2100000, guid: b6e8aad553173d0488d15b2fcdd2a069, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

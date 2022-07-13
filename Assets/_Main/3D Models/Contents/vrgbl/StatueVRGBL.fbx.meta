@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Dolphin
-    second: {fileID: 2100000, guid: c835110827ec91c4b9a2c7fc18b85bbf, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material #46
-    second: {fileID: 2100000, guid: ff6135c87c08fe44c945d2719dd2458e, type: 2}
+      name: Lumba2
+    second: {fileID: 2100000, guid: 231e6ffab6a304441848a6e2654fdf14, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -49,6 +44,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: TEXT
     second: {fileID: 2100000, guid: 8b8b86ce5219d9d41af6c6c8aba2e184, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tangan
+    second: {fileID: 2100000, guid: 9f053503e4c71bd46995299800af7629, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
