@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void freeCam()
     {
-        float movementSpeed = 10f;
+        float movementSpeed = 1f;
 
 
         Cursor.visible = false;
