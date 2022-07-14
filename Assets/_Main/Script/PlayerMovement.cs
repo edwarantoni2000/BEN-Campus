@@ -91,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         float movementSpeed = 10f;
 
 
+        Cursor.visible = false;
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position = transform.position + (-transform.right * movementSpeed * Time.deltaTime);
