@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MouseLook : MonoBehaviour
+public class EdwarMouseTap : MonoBehaviour
 {
     
     public float mouseSensitivity = 100f;
@@ -13,6 +13,9 @@ public class MouseLook : MonoBehaviour
     float xRotation = 0f;
     bool Paused = false;
     private Vector3 rotateValue;
+
+
+
 
     private void Start()
     {
@@ -32,13 +35,14 @@ public class MouseLook : MonoBehaviour
     }
 
 
-    public void setTouchedFalse()
-    {
-        isTouched = false;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Confined;
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-    }
+
+    //public void setTouchedFalse()
+    //{
+    //    isTouched = false;
+    //    Cursor.visible = true;
+    //    Cursor.lockState = CursorLockMode.Confined;
+    //    transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+    //}
 
 
 
