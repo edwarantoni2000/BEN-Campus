@@ -64,8 +64,8 @@ public class ObjectClick : MonoBehaviour
 
     private void Start()
     {
-        
 
+     
         Cursor.visible = true;
         m_Renderer = GetComponent<MeshRenderer>();
         m_OriginalColor = m_Renderer.material;
@@ -74,10 +74,6 @@ public class ObjectClick : MonoBehaviour
 
     
     }
-
-  
-
-
 
     public void OnMouseOver()
     {
@@ -103,26 +99,24 @@ public class ObjectClick : MonoBehaviour
         {
             m_Renderer.material = m_MouseOverColor;
         }
-        
- 
-
-        
+      
     }
 
 
     public void OnMouseExit()
     {
+        anim.GetComponent<Animator>().enabled = false;
         cube3.SetActive(false);
         cube4.SetActive(false);
 
         m_Renderer.material = m_OriginalColor;
+        m_Rotating.material = m_OriginalColor;
     }
 
 
     private void OnMouseDown()
 
-        {
- 
+    {
 
         if (isCube2Active == true)
         {
