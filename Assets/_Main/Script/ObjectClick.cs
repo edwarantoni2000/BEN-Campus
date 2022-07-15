@@ -12,8 +12,14 @@ public class ObjectClick : MonoBehaviour
     public bool isCube1Destroy= true;
 
     public GameObject cube;
-    public bool isCube2Aktive = true;
+    public bool isCube2Active = true;
     public GameObject cube2;
+
+    public bool isCube3Active = false;
+    public GameObject cube3;
+
+    public bool isCube4Active = false;
+    public GameObject cube4;
  
 
     private Material m_Mat;
@@ -26,13 +32,17 @@ public class ObjectClick : MonoBehaviour
     public bool isChangeColorActive = true;
     [SerializeField]  public Material m_MouseOverColor;
     [SerializeField] public Material m_OriginalColor;
-    [SerializeField] public Material m_OriginalColor2;
+ 
 
     MeshRenderer m_Renderer;
-    //[SerializeField] List<GameObject> Trash = new List<GameObject>();
+    MeshRenderer m_Rotating;
+    
 
+    public bool isAnimating = false;
 
- 
+    public Animator anim;
+    [SerializeField] public Material m_MouseColorRotating;
+
 
     private void OnEnable()
     {
@@ -54,12 +64,15 @@ public class ObjectClick : MonoBehaviour
 
     private void Start()
     {
-
+        
 
         Cursor.visible = true;
         m_Renderer = GetComponent<MeshRenderer>();
         m_OriginalColor = m_Renderer.material;
-        m_OriginalColor2 = m_Renderer.material;
+
+        m_Rotating = GetComponent<MeshRenderer>();
+
+    
     }
 
   
@@ -68,27 +81,50 @@ public class ObjectClick : MonoBehaviour
 
     public void OnMouseOver()
     {
-        if(isChangeColorActive == true)
+        if (isAnimating == true)
+        {
+            anim.GetComponent<Animator>().enabled = true;
+            
+            m_Rotating.material = m_MouseColorRotating;
+        }
+        if (isCube4Active == true)
+        {
+            cube4.gameObject.SetActive(true);
+           
+        } 
+
+        if (isCube3Active == true)
+        {
+            cube3.gameObject.SetActive(true);
+          
+        } 
+
+        if (isChangeColorActive == true)
         {
             m_Renderer.material = m_MouseOverColor;
         }
         
-   
+ 
+
         
     }
 
+
     public void OnMouseExit()
     {
+        cube3.SetActive(false);
+        cube4.SetActive(false);
+
         m_Renderer.material = m_OriginalColor;
-        m_Renderer.material = m_OriginalColor2;
     }
 
 
     private void OnMouseDown()
 
         {
+ 
 
-        if (isCube2Aktive == true)
+        if (isCube2Active == true)
         {
 
             cube2.gameObject.SetActive(true);
